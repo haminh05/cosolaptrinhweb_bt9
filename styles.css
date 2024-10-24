@@ -267,10 +267,321 @@ header nav ul li a:hover {
   color: #666;
 }
 
+/* Testimonial Section */
+.testimonial-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 cột */
+  max-width: 1200px;
+  gap: 20px;
+  align-items: center;
+}
+
+.testimonial-left {
+  position: relative;
+}
+
+.testimonial-image-container {
+  position: relative;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.testimonial-center {
+  text-align: left;
+}
+
+.testimonial-center h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testimonial-center p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.dot.active {
+  background-color: #3b82f6;
+}
+
+/* Avatar Section */
+.testimonial-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-group {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.avatar-group .main-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.avatar-group .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.avatar-group .avatar:nth-child(2) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar-group .avatar:nth-child(3) {
+  top: 25%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.avatar-group .avatar:nth-child(4) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar-group .avatar:nth-child(5) {
+  top: 75%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.avatar-group .avatar:nth-child(6) {
+  top: 25%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.avatar-group .avatar:nth-child(7) {
+  top: 75%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Container chính của subscribe */
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f4ff; /* Màu nền nhẹ cho container */
+  padding: 50px 80px;
+  border-radius: 40px; /* Bo góc mềm mại */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng của container */
+  max-width: 1272px; /* Kích thước tối đa tương tự testimonial */
+  margin-left: auto; /* Căn giữa container */
+  margin-right: auto; /* Căn giữa container */
+}
+
+/* Phần nội dung bên trái */
+.subscribe-content {
+  flex: 1;
+}
+
+.subscribe-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.subscribe-content p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Phần hộp nhập email và nút */
+.subscribe-input {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.subscribe-input input {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-right: 20px;
+  font-size: 16px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho hộp nhập */
+}
+
+.subscribe-input button {
+  background-color: #3b82f6; /* Màu xanh đậm */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0px 10px 15px rgba(59, 130, 246, 0.4); /* Đổ bóng */
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-input button:hover {
+  background-color: #0056b3; /* Hiệu ứng hover đổi màu */
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: #fef3c7;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.subscribe::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: #fef3c7; /* Một hiệu ứng hình tròn nhạt phía dưới */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.subscribe-content,
+.subscribe-input {
+  z-index: 1;
+}
+
 /* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.footer-section.studio {
+  flex: 2;
+  margin-right: 90px;
+}
+
+.footer-section:not(.studio) {
+  margin-left: 30px;
+}
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.footer-section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #333;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-right: 15px;
+}
+
+.social-icons a img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2); /* Tăng kích thước icon khi hover */
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 20px 0;
+  height: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 22.4px;
+  color: #999;
 }
